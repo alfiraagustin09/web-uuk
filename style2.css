@@ -11,8 +11,8 @@
     --text-primary: #79655d;
     --text-secondary: #322f2d;
     --white: #ffffff;
-    --shadow: 0 10px 40px rgba(0,0,0,0.08);
-    --shadow-hover: 0 20px 60px rgba(0,0,0,0.12);
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
 body {
@@ -35,10 +35,9 @@ nav {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: #322f2d !important;
     text-decoration: none;
 }
-
 
 .nav-links a {
     text-decoration: none;
@@ -63,50 +62,48 @@ nav {
     width: 100%;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-primary);
-    transition: 0.3s;
-}
-
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url(''); 
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.nav-links a {
     position: relative;
-    overflow: hidden;
+    transition: color 0.3s ease;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
- 
-    animation: float 20s ease-in-out infinite;
+.nav-links a:hover {
+    color: #b08f7a !important;
 }
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex !important;
+    list-style: none !important;
+    gap: 3rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    align-items: center !important;
+}
+
+.nav-links a {
+    text-decoration: none !important;
+    color: #2d1b14 !important;
+    font-weight: 500 !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1rem !important;
+    transition: color 0.3s ease !important;
+}
+
 .main-header {
+    color: #2d1b14 !important;
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-   background: rgba(203, 185, 189, 0.95);
+    background: rgba(203, 185, 189, 0.95);
     backdrop-filter: blur(20px) !important;
     z-index: 9999 !important;
     padding: 15px 0 !important;
@@ -114,84 +111,36 @@ nav {
 }
 
 .shop-header {
-    margin-top: 1000px !important; /* Memberi ruang agar tidak tertutup navbar */
-    background-color:#fff8f1!important; /* Sesuai request kamu sebelumnya: banner putih */
-
-    margin-top: 120px !important; 
-    height: 450px !important; 
+    background-color: #f7f3ed !important;
+    min-height: 550px !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important; 
+    justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
-    padding-bottom: 100px !important; 
-    padding-top: 0 !important;
-    background-image: url('') !important; 
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+    padding: 320px 20px 220px 20px !important;
+    margin-top: 0 !important;
 }
 
-
 .shop-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font: 3.5rem/1 'Playfair Display', serif;
     color: #5a4a42;
     margin-bottom: 10px;
 }
 
 .shop-header p {
-    font-size: 1.1rem;
+    font: 1.1rem 'Poppins', sans-serif;
     color: #5a4a42;
-    font-style: italic;
 }
 
 .main-header .logo {
-    font-family: 'Playfair Display', serif !important;
-    font-size: 2rem !important;
-    font-weight: 700 !important;
-    color: #2d1b14 !important; /* Cokelat Tua */
-    text-decoration: none !important;
-}
-
-.main-header .nav-links {
-    display: flex !important;
-    list-style: none !important;
-    gap: 3rem !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.main-header .nav-links a {
-    text-decoration: none !important;
     color: #2d1b14 !important;
-    font-weight: 500 !important;
-    font-size: 1rem;
 }
 
 body {
-    background-color: #fdfaf5; /* Krem Estetik */
+    background-color: #fdfaf5;
     font-family: 'Poppins', sans-serif;
     color: #5d4037;
-    margin: 0;
-    padding: 0;
-}
-
-.shop-header {
-    padding: 80px 0 40px;
-    text-align: center;
-    background-color: #f7f3ed;
-}
-
-.shop-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-}
-
-.shop-header p {
-    color: #8d6e63;
-    font-weight: 300;
 }
 
 .card-produk {
@@ -200,15 +149,10 @@ body {
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.4s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
     height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.card-produk:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 15px 30px rgba(141, 110, 99, 0.15);
 }
 
 .img-wrapper {
@@ -221,10 +165,6 @@ body {
     height: 100%;
     object-fit: cover;
     transition: 0.6s ease;
-}
-
-.card-produk:hover img {
-    transform: scale(1.1);
 }
 
 .card-body-custom {
@@ -253,13 +193,13 @@ body {
 }
 
 .price {
-    color: #8d6e63;
+    color: #8b7972;
     font-weight: 600;
     margin-bottom: 15px;
 }
 
 .btn-add {
-    background-color: #d7ccc8;
+    background-color: #c6b1aa;
     color: white;
     border: none;
     border-radius: 50px;
@@ -274,68 +214,10 @@ body {
     background-color: #8d6e63;
 }
 
-.newsletter {
-    background-color: #f8f5f2 !important;
-    padding: 100px 0; 
-    text-align: center;
-}
-
-.newsletter h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.newsletter p {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-bottom: 3rem;
-}
-
-.newsletter-form {
-    display: flex;
-    max-width: 500px;
-    margin: 0 auto;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.newsletter-input {
-    flex: 1;
-    min-width: 250px;
-    padding: 1.2rem 1.5rem;
-    border: 2px solid var(--secondary);
-    border-radius: 50px;
-    font-size: 1rem;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.newsletter-input:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(212, 184, 167, 0.1);
-}
-
-.newsletter-btn {
-    background: var(--accent);
-    color: var(--white);
-    border: none;
-    padding: 1.2rem 2.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.newsletter-btn:hover {
-    background: #c89f7e;
-    transform: translateY(-2px);
-}
 
 footer {
-    background: var(--text-primary);
-    color: var(--white);
+    background-color: #79655d !important;
+    color: #ffffff !important;
     padding: 4rem 5% 2rem;
 }
 
@@ -349,9 +231,8 @@ footer {
 }
 
 .footer-section h4 {
-    font-family: 'Playfair Display', serif;
+    font: 1.3rem 'Playfair Display', serif;
     margin-bottom: 1.5rem;
-    font-size: 1.3rem;
 }
 
 .footer-section ul {
@@ -369,7 +250,8 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    color: var(--accent);
+    color: #b5a593 !important;
+    opacity: 0.8;
 }
 
 .social-links {
@@ -394,77 +276,4 @@ footer {
 .social-links a:hover {
     background: var(--accent);
     transform: translateY(-3px);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid var(--secondary);
-    color: var(--secondary);
-}
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.btn-filter-custom.active {
-    background-color: #b7ab87;
-    border-color: #e0d6b7;
-    color: #333333; 
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-}
-
-.btn-filter-custom:hover:not(.active) {
-    background-color: #fff9e6; 
-    border-color: #cfc4a1;
-    color: #c5b68c;
-    transform: translateY(-2px); 
-}
-
-.btn-filter-custom:focus {
-    outline: none !important;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15) !important;
-}
-
-.filter-item.active {
-    background: #BCB08A;
-    border-color: #BCB08A;
-    color: white;
-}
-
-.filter-btn.active {
-    background: #BCB08A !important;
-    border-color: #BCB08A !important;
-    color: white !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.nav-links a:hover {
-    color: #b08f7a !important; 
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: #b08f7a;
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.nav-links a.active::after {
-    width: 100%;
 }
