@@ -75,11 +75,6 @@ nav {
     transition: color 0.3s ease !important;
 }
 
-.nav-links a {
-    position: relative; 
-    transition: color 0.3s ease;
-}
-
 .nav-links a:hover {
     color: #b08f7a !important; 
 }
@@ -104,15 +99,12 @@ nav {
 }
 
 .main-header {
+    color: #2d1b14 !important;
     position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
     width: 100% !important;
     background: rgba(203, 185, 189, 0.95);
     backdrop-filter: blur(20px) !important;
-    z-index: 9999 !important;
     padding: 15px 0 !important;
-    transition: all 0.3s ease;
 }
 
 .shop-header { 
@@ -125,6 +117,25 @@ nav {
     text-align: center !important; 
     padding: 330px 20px 220px 20px !important; 
     margin-top: 0 !important; 
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 footer {
@@ -164,35 +175,4 @@ footer {
 
 .footer-section ul li a:hover {
     color: var(--accent);
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.social-links a {
-    width: 45px;
-    height: 45px;
-    background: var(--secondary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-    background: var(--accent);
-    transform: translateY(-3px);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid var(--secondary);
-    color: var(--secondary);
 }
