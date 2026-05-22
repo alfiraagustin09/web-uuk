@@ -29,10 +29,6 @@ body {
     padding: 0;
 }
 
-.testimonials-section, .main-wrapper {
-    background-color: #f8f5f2 !important;
-}
-
 nav {
     max-width: 1400px;
     margin: 0 auto;
@@ -132,12 +128,6 @@ nav {
     margin-top: 0 !important; 
 }
 
-.testi-header-section {
-    margin-top: 100px;
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f4e9e7; 
-}
 
 .testi-header-section h1 {
     font-family: 'Playfair Display', serif;

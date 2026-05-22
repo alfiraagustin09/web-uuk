@@ -6,27 +6,18 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     });
 });
 
-// 2. Navbar Efek Scroll
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const isScrolled = window.scrollY > 100;
-    header.style.background = isScrolled ? 'rgba(206, 197, 188, 0.98)' : 'rgba(248, 245, 242, 0.95)';
-    header.style.boxShadow = isScrolled ? '0 5px 30px rgba(0,0,0,0.1)' : 'none';
-});
-
-// 3. Animasi Muncul (Fade In)
+// 2. Animasi Muncul (Fade In)
 const observer = new IntersectionObserver(entries => {
     entries.forEach(el => el.isIntersecting && el.target.classList.add('visible'));
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// 4. Pop-up Notifikasi Add to Cart (Tetap Smooth)
+// 3. Pop-up Notifikasi Add to Cart (Tetap Smooth)
 document.querySelectorAll('.add-to-cart').forEach(btn => {
     btn.addEventListener('click', function() {
         const card = this.closest('.product-card');
         const name = card.querySelector('.product-name').textContent;
         const price = card.querySelector('.product-price').textContent;
-        
         const pop = document.createElement('div');
         pop.style.cssText = `position:fixed; top:20px; right:20px; background:var(--accent); color:white; padding:1rem 2rem; border-radius:10px; z-index:10000; font-weight:600; box-shadow:var(--shadow-hover); animation:slideIn 0.3s ease forwards;`;
         pop.innerHTML = `${name} added to cart!<div style="font-size:0.9rem; opacity:0.9; margin-top:0.5rem;">${price}</div>`;
@@ -39,12 +30,7 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
     });
 });
 
-// Inject Animasi Slide Pop-up
-const style = document.createElement('style');
-style.textContent = `@keyframes slideIn{from{transform:translateX(120%);opacity:0}to{transform:translateX(0);opacity:1}} @keyframes slideOut{from{transform:translateX(0);opacity:1}to{transform:translateX(120%);opacity:0}}`;
-document.head.appendChild(style);
-
-// 6. Filter Kategori Produk
+// 4. Filter Kategori Produk
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', function() {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
