@@ -52,6 +52,7 @@ nav {
     display: flex;
     list-style: none;
     gap: 3rem;
+    transform: translateY(5px); 
 }
 
 .nav-links a {
