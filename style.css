@@ -82,6 +82,10 @@ nav {
     width: 100%;
 }
 
+.nav-links a.active::after {
+    width: 100%;
+}
+
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./bg\ creammm.jpeg') center/cover;
@@ -115,7 +119,6 @@ nav {
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
-   
 }
 
 .collections {
@@ -285,6 +288,8 @@ nav {
     transition: all 0.3s ease;
     background: #eae0d5 !important;
     color: #79655d !important;
+    pointer-events: none; 
+    cursor: default;
 }
 
 .fade-in {
