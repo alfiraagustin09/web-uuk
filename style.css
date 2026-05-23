@@ -146,11 +146,6 @@ nav {
     font-weight: 300;
 }
 
-.collection-title {
-    font: 600 2rem 'Playfair Display', serif;
-    margin-bottom: 0.5rem;
-}
-
 .products {
     padding: 120px 5%;
     background: var(--secondary);
@@ -218,6 +213,15 @@ nav {
     background: none !important;
 }
 
+.filter-item {
+    display: none !important;
+}
+
+.filter-item.active-content {
+    display: block !important;
+    animation: fadeIn 0.5s ease forwards;
+}
+
 .card-produk {
     background: #fff;
     border: 2px solid #BCB08A !important;
@@ -229,21 +233,6 @@ nav {
 
 .card-produk p {
     color: #c4ae96 !important;
-}
-
-.filter-item {
-    display: none !important;
-    border: 2px solid #e3e0d8;
-    padding: 10px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    background: white;
-}
-
-.filter-item.active-content {
-    display: block !important;
-    animation: fadeIn 0.5s ease forwards;
 }
 
 .filter-container {
@@ -309,11 +298,6 @@ footer {
     padding: 4rem 5% 2rem;
 }
 
-footer a:hover {
-    color: #b5a593 !important;
-    opacity: 0.8;
-}
-
 .footer-content {
     max-width: 1400px;
     margin: 0 auto;
@@ -343,6 +327,8 @@ footer a:hover {
     transition: color 0.3s ease;
 }
 
+footer a:hover,
 .footer-section ul li a:hover {
-    color: var(--accent);
+    color: #b5a593 !important;
+    opacity: 0.8;
 }

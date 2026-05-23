@@ -22,6 +22,15 @@ body {
     overflow-x: hidden;
 }
 
+.main-header {
+    position: fixed !important;
+    width: 100% !important;
+    background: rgba(203, 185, 189, 0.95);
+    backdrop-filter: blur(20px) !important;
+    padding: 15px 0 !important;
+    z-index: 1000;
+}
+
 nav {
     max-width: 1400px;
     margin: 0 auto;
@@ -37,41 +46,6 @@ nav {
     font-weight: 700;
     color: #322f2d !important;
     text-decoration: none;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: var(--accent);
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.nav-links a:hover {
-    color: #b08f7a !important;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.nav-links a.active::after {
-    width: 100%;
 }
 
 .nav-links {
@@ -90,27 +64,38 @@ nav {
     font-family: 'Inter', sans-serif !important;
     font-size: 1rem !important;
     transition: color 0.3s ease !important;
+    position: relative;
 }
 
-.main-header {
-    color: #2d1b14 !important;
-    position: fixed !important;
-    width: 100% !important;
-    background: rgba(203, 185, 189, 0.95);
-    backdrop-filter: blur(20px) !important;
-    padding: 15px 0 !important;
+.nav-links a:hover {
+    color: #b08f7a !important;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
 }
 
 .shop-header {
     background-color: #f7f3ed !important;
-    min-height: 550px !important;
+    min-height: 700px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
     padding: 320px 20px 220px 20px !important;
-    margin-top: 0 !important;
 }
 
 .shop-header h1 {
@@ -125,7 +110,7 @@ nav {
 }
 
 .card-produk {
-    background: #ffffff;
+    background: #faf4f4;
     border: none;
     border-radius: 20px;
     overflow: hidden;
