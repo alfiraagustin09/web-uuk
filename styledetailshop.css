@@ -65,22 +65,10 @@ nav {
     text-decoration: none;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
 .nav-links {
     display: flex !important;
     list-style: none !important;
-    gap: 3rem !important; 
+    gap: 3rem !important;
     margin: 0 !important;
     padding: 0 !important;
     align-items: center !important;
@@ -88,16 +76,15 @@ nav {
 
 .nav-links a {
     text-decoration: none !important;
-    color: #2d1b14 !important; 
-}
-
-.nav-links a {
-    position: relative; 
-    transition: color 0.3s ease;
+    color: #2d1b14 !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    transition: color 0.3s ease !important;
+    position: relative;
 }
 
 .nav-links a:hover {
-    color: #b08f7a !important; 
+    color: #b08f7a !important;
 }
 
 .nav-links a::after {
@@ -107,10 +94,11 @@ nav {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background: #b08f7a;
+    background: var(--accent);
     transition: width 0.3s ease;
 }
 
+.nav-links a:hover::after,
 .nav-links a.active::after {
     width: 100%;
 }

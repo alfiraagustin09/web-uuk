@@ -86,7 +86,6 @@ nav {
     z-index: 1000;
 }
 
-/* Pembersihan margin-top yang tidak berefek */
 .shop-header { 
     background-color: #f7f3ed !important; 
     min-height: 770px !important;
